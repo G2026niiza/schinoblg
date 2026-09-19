@@ -100,6 +100,51 @@
 	<a href="https://lniiza2019.livedoor.blog/">　市章　</a>　
 <tr>	
 <p> ＊＊＊　*********************************　＊＊＊</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Pages アクセスカウンター</title>
+<style>
+  body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+  .counter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+    background: #ecf0f1;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+
+
+<script>
+// countapi.xyz を使ってアクセス数を管理
+// namespace と key は自由に設定可能（他人と被らないようにする）
+const namespace = "mygithubpage";
+const key = "homepage";
+
+async function updateCounter() {
+    try {
+        // API呼び出し（訪問時にカウントアップ）
+        const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+        if (!res.ok) throw new Error("APIエラー");
+        const data = await res.json();
+        document.getElementById("counter").textContent = data.value.toLocaleString();
+    } catch (err) {
+        console.error(err);
+        document.getElementById("counter").textContent = "取得失敗";
+    }
+}
+
+updateCounter();
+</script>
+
+
 
 	
 </body>
