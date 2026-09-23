@@ -1,1 +1,19 @@
+<style>
+    .flex-gap-sample {
+        display: flex;
+        gap: 20px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        background: #fafafa;
+    }
+    .flex-gap-sample img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+</style>
 
+<div class="flex-gap-sample">
+    <img src="/muship/0293_EM100265.jpg" alt="余白調整サンプル画像一" class="rounded">
+    <img src="/muship/0595_P9101375.jpg" alt="余白調整サンプル画像二" class="rounded">
+</div>
